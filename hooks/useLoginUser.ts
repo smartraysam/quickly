@@ -39,7 +39,6 @@ export function useLoginUser(
     mutationFn: loginUser,
     ...options,
     onSuccess: (data, variables, context) => {
-      // Example: store token temporarily (customize securely for your use case)
       sessionStorage.setItem("auth-token", data.token);
       options?.onSuccess?.(data, variables, context);
     },

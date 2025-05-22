@@ -33,6 +33,7 @@ export default function LoginPage() {
   const mutation = useLoginUser({
     onSuccess: (data) => {
       setToken(data.token);
+      toast.success("Login successful!");
       router.push("/profile");
     },
     onError: (err: Error) => {
